@@ -1,5 +1,4 @@
 
-
 main: main.o funcs.o
 	g++ -o main main.o funcs.o
 
@@ -9,8 +8,7 @@ tests: tests.o
 
 funcs.o: funcs.cpp funcs.h
 
-main.o: main.cpp funcs.h
-
+main.o: main.cpp funcs.hs
 
 tests.o: tests.cpp  doctest.h
 
