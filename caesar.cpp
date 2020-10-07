@@ -1,14 +1,15 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "caesar.h"
 
 char shiftChar(char input,int shift){
 	int x = (int)input;
-	if(x > 96 && x < 123){//lower case
-		return (char)((x+shift-96) % 26 + 96);
+	if(islower(input)){
+		return (char)(((x+shift-97)+26) % 26 + 97);
 	}
-	else if(x > 64 && x < 92){//upper case
-		return (char)((x+shift-64) % 26 + 64);
+	else if(isupper(input)){
+		return (char)(((x+shift-65)+26 )% 26 + 65);
 	}
 	else return input;
 }

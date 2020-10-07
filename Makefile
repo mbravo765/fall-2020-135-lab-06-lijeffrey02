@@ -5,10 +5,12 @@ tests: tests.o caesar.o viginere.o decrypt.o
 	g++ -o tests tests.o caesar.o viginere.o decrypt.o
 
 run_main: main
+	make clean
 	make main
 	./main
 
 run_tests: tests
+	make clean
 	make tests
 	./tests
 
