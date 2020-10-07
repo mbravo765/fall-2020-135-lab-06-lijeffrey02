@@ -1,10 +1,10 @@
 * Fall 2020 - Lab 06
 
-* Last name:
+* Last name: Li
 
-* First name:
+* First name: Jeffrey
 
-* GitHub username:
+* GitHub username: lijeffrey02
 
 * Notes:
 
