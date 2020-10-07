@@ -2,7 +2,7 @@ main: main.o funcs.o caesar.o viginere.o decrypt.o
 	g++ -o main main.o funcs.o caesar.o viginere.o decrypt.o
 
 tests: tests.o caesar.o viginere.o decrypt.o
-	g++ -o tests tests.o funcs.o caesar.o viginere.o decrypt.o
+	g++ -o tests tests.o caesar.o viginere.o decrypt.o
 
 run_main: main
 	make main
