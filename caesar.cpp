@@ -7,7 +7,7 @@ char shiftChar(char input,int shift){
 	if(x > 96 && x < 123){//lower case
 		return (char)((x+shift-96) % 26 + 96);
 	}
-	else if(x > 64 && x < 92){
+	else if(x > 64 && x < 92){//upper case
 		return (char)((x+shift-64) % 26 + 64);
 	}
 	else return input;
