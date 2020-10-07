@@ -4,6 +4,14 @@ main: main.o funcs.o caesar.o decrypt.o viginere.o
 tests: tests.o caesar.o decrypt.o viginere.o
 	g++ -o tests tests.o funcs.o caesar.o decrypt.o viginere.o
 
+run_main: main
+	make main
+	./main
+
+run_tests: tests
+	make tests
+	./tests
+
 funcs.o: funcs.cpp funcs.h
 
 main.o: main.cpp funcs.h

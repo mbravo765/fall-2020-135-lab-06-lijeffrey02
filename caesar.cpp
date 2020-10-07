@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "caesar.h"
+
 char shiftChar(char input,int shift){
 	int x = (int)input;
 	if(x > 96 && x < 123){//lower case
