@@ -5,5 +5,6 @@
 
 int main()
 {
-  return 0;
+	test_ascii("Hello, World!");
+  	return 0;
 }

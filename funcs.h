@@ -2,5 +2,5 @@
 
 // add prototypes here
 
-std::string testascii(std::string input);
+void test_ascii(std::string input);
 
