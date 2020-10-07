@@ -7,9 +7,6 @@
 
 // add your tests here
 
-TEST_CASE("Sample"){
-	CHECK(true);
-}
 TEST_CASE("Caesar"){
-	CHECK(encryptCaesar("A Light-Year Apart",5) == "f Qnlmy-Djfw Fufwy");
+	CHECK(encryptCaesar("A Light-Year Apart",5) == "F Qnlmy-Djfw Fufwy");
 }

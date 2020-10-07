@@ -1,10 +1,8 @@
 main: main.o funcs.o caesar.o decrypt.o viginere.o
 	g++ -o main main.o funcs.o caesar.o decrypt.o viginere.o
-	./main
 
-tests: tests.o 
-	g++ -o tests tests.o
-	./tests 
+tests: tests.o caesar.o decrypt.o viginere.o
+	g++ -o tests tests.o funcs.o caesar.o decrypt.o viginere.o
 
 funcs.o: funcs.cpp funcs.h
 
