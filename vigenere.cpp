@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include <cctype>
-#include "viginere.h"
+#include "vigenere.h"
 #include "caesar.h"
 
-std::string encryptViginere(std::string text, std::string keyword){
+std::string encryptVigenere(std::string text, std::string keyword){
 	std::string ans;
 	int index = 0;
 	for(char x : text){

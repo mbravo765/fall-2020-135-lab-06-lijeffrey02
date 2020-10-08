@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "viginere.h"
+#include "vigenere.h"
 #include "caesar.h"
 
 std::string decryptCaesar(std::string text,int shift){
