@@ -13,7 +13,7 @@ run_tests: tests
 	make clean
 	make tests
 	./tests
-
+	
 funcs.o: funcs.cpp funcs.h
 
 main.o: main.cpp funcs.h

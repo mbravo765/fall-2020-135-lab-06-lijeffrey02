@@ -4,12 +4,11 @@
 #include "caesar.h"
 
 char shiftChar(char input,int shift){
-	int x = (int)input;
 	if(islower(input)){
-		return (char)(((x+shift-97)+26) % 26 + 97);
+		return (char)(((int)input+shift+7) % 26 + 97);
 	}
 	else if(isupper(input)){
-		return (char)(((x+shift-65)+26 )% 26 + 65);
+		return (char)(((int)input+shift+13) % 26 + 65);
 	}
 	else return input;
 }
