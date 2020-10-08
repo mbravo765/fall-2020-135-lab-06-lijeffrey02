@@ -8,7 +8,7 @@ std::string decryptCaesar(std::string text,int shift){
 	return encryptCaesar(text,26-shift);
 }
 
-std::string decryptViginere(std::string text, std::string keyword){
+std::string decryptVigenere(std::string text, std::string keyword){
 	// std::string newkeyword;
 	// for(char x : keyword){
 	// 	newkeyword += shiftChar(x,26-(int)(x)-97);
