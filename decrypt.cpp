@@ -11,14 +11,18 @@ std::string decryptCaesar(std::string text,int shift){
 std::string decryptVigenere(std::string text, std::string keyword){
 	// std::string newkeyword;
 	// for(char x : keyword){
-	// 	newkeyword += shiftChar(x,26-(int)(x)-97);
+	//     newkeyword += shiftChar(x,26-(int)(x)-97);
 	// }
 	// return encryptViginere(text,newkeyword);
 	std::string ans;
 	int index = 0;
-	for(char x : text){
-		ans += shiftChar(x,26-(int)(keyword[index%keyword.size()])-97);
-		if(isalpha(x)) index++;
+	char a;
+	for (char x: text){
+		a = std::tolower(keyword[index%keyword.size()]);
+		ans += shiftChar(x,26-((int)a-97));
+		if (isalpha(x)){
+			index++;
+		}
 	}
 	return ans;
 }

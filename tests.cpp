@@ -19,6 +19,6 @@ TEST_CASE("Decrypt"){
 	CHECK(decryptCaesar("F Qnlmy-Djfw Fufwy",5) == "A Light-Year Apart");
 	CHECK(decryptVigenere("Jevpq, Wyvnd!","cake") == "Hello, World!");
 }
-// TEST_CASE("Loop"){
-// 	CHECK(decryptCaesar(encryptCaesar("Hi There!!",20),20) == "Hi There!!");
-// }
+TEST_CASE("Loop"){
+	CHECK(decryptCaesar(encryptCaesar("Hi There!!",20),20) == "Hi There!!");
+}
