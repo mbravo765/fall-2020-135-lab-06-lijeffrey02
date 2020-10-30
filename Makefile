@@ -1,8 +1,8 @@
-main: main.o funcs.o caesar.o vigenere.o decrypt.o
-	g++ -o main main.o funcs.o caesar.o vigenere.o decrypt.o
+main: main.o funcs.o caesar.o vigenere.o decrypt.o decode.o
+	g++ -o main main.o funcs.o caesar.o vigenere.o decrypt.o decode.o
 
-tests: tests.o caesar.o vigenere.o decrypt.o
-	g++ -o tests tests.o caesar.o vigenere.o decrypt.o
+tests: tests.o caesar.o vigenere.o decrypt.o decode.o
+	g++ -o tests tests.o caesar.o vigenere.o decrypt.o decode.o
 
 run_main: main
 	make clean
@@ -26,11 +26,13 @@ vigenere.o: vigenere.cpp vigenere.h
 
 decrypt.o: decrypt.cpp decrypt.h
 
+decode.o: decode.cpp decode.h
+
 add: 
 	git add caesar.cpp caesar.h decrypt.cpp decrypt.h doctest.h funcs.cpp funcs.h main.cpp Makefile README.org tests.cpp vigenere.cpp vigenere.h
 
 clean:
-	rm -f main.o tests.o funcs.o caesar.o decrypt.o vigenere.o main tests
+	rm -f main.o tests.o funcs.o caesar.o decrypt.o vigenere.o decode.o main tests
 
 help:
 	@echo  make main : make executable named main
