@@ -4,6 +4,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 // add your tests here
 
@@ -21,4 +22,12 @@ TEST_CASE("Decrypt"){
 }
 TEST_CASE("Loop"){
 	CHECK(decryptCaesar(encryptCaesar("Hi There!!",20),20) == "Hi There!!");
+}
+TEST_CASE("Decode"){
+	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",20)) == "Hi There, how are you doing today!!");
+	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",15)) == "Hi There, how are you doing today!!");
+	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",16)) == "Hi There, how are you doing today!!");
+	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",4)) == "Hi There, how are you doing today!!");
+	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",0)) == "Hi There, how are you doing today!!");
+	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",200)) == "Hi There, how are you doing today!!");
 }
