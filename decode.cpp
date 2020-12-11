@@ -6,6 +6,10 @@
 #include "decrypt.h"
 #include "decode.h"
 
+//I think it would be helpful for potential co-editors to explain what the functions do
+//since each function is a building block to have the desired output
+
+//the names of the functions are very relevant
 int frequency(std::string input, char c){
 	if(!isalpha(c)) return 0;
 	int ans = 0;

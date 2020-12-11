@@ -23,6 +23,8 @@ TEST_CASE("Decrypt"){
 TEST_CASE("Loop"){
 	CHECK(decryptCaesar(encryptCaesar("Hi There!!",20),20) == "Hi There!!");
 }
+
+//maybe try testing other sentences
 TEST_CASE("Decode"){
 	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",20)) == "Hi There, how are you doing today!!");
 	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",15)) == "Hi There, how are you doing today!!");
@@ -30,4 +32,7 @@ TEST_CASE("Decode"){
 	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",4)) == "Hi There, how are you doing today!!");
 	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",0)) == "Hi There, how are you doing today!!");
 	CHECK(decode(encryptCaesar("Hi There, how are you doing today!!",200)) == "Hi There, how are you doing today!!");
+
+
 }
+
